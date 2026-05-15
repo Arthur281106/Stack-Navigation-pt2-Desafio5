@@ -1,0 +1,33 @@
+import React from 'react';
+import { View, Text, Image, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { estilos } from '../styleSheet/estilos';
+
+export default function Principal() {
+  const nav = useNavigation();
+
+  function proximaTela() {
+    nav.navigate('Tela01');
+  }
+
+  return (
+    <View style={estilos.Principal_fundo}>
+      <Text style={estilos.Principal_SubTit}>
+        Stack Navigation - Avatar
+      </Text>
+
+      <Image
+        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTppRjdp6n7TBSBRrqy2k4NYyPEv8ruDGR67g&s' }}
+        style={estilos.Principal_img}
+      />
+
+      <Text style={estilos.Principal_Tit}>
+        A LENDA DE AANG
+      </Text>
+
+      <Button title="Iniciar Jornada" onPress={proximaTela} />
+
+      <Text style={estilos.Principal_SubTit2}>DSV MOBILE</Text>
+    </View>
+  );
+}
