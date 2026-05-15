@@ -1,0 +1,72 @@
+import { StyleSheet } from 'react-native';
+
+export const estilos = StyleSheet.create({
+
+  Principal_fundo: {
+    flex: 1,
+    backgroundColor: '#ececec',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+
+  Principal_SubTit: {
+    fontSize: 22,
+    marginBottom: 20,
+  },
+
+  Principal_img: {
+    width: 220,
+    height: 220,
+    resizeMode: 'contain',
+    marginBottom: 20,
+  },
+
+  Principal_Tit: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+
+  Principal_SubTit2: {
+    marginTop: 30,
+    fontSize: 20,
+    color: 'blue',
+  },
+
+  avatarFundo: {
+    flex: 1,
+    backgroundColor: '#1a1a2e',
+    alignItems: 'center',
+    paddingTop: 40,
+    paddingHorizontal: 20,
+  },
+
+  avatarTitulo: {
+    color: '#fff',
+    fontSize: 36,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+
+  avatarImg: {
+    width: 180,
+    height: 180,
+    borderRadius: 90,
+    marginBottom: 20,
+  },
+
+  avatarTexto: {
+    color: '#fff',
+    fontSize: 18,
+    marginBottom: 15,
+    width: '100%',
+  },
+
+  botoes: {
+    flexDirection: 'row',
+    gap: 15,
+    marginTop: 30,
+  },
+
+});
