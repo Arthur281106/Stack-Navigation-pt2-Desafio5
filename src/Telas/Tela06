@@ -1,0 +1,28 @@
+import React from 'react';
+import { View, Text, Image, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { estilos } from '../styleSheet/estilos';
+
+export default function Tela06() {
+  const nav = useNavigation();
+
+  return (
+    <View style={estilos.avatarFundo}>
+      <Text style={estilos.avatarTitulo}>Azula</Text>
+
+      <Image
+        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQQCmR2I_3V-mN0qqv-0gM-4nZ-F9YyeyTA&s' }}
+        style={estilos.avatarImg}
+      />
+
+      <Text style={estilos.avatarTexto}>Azula é a princesa da Nação do Fogo, irmã de Zuko e uma das antagonistas mais temidas.</Text>
+      <Text style={estilos.avatarTexto}>• Mestre da dobra de fogo azul.</Text>
+      <Text style={estilos.avatarTexto}>• Extremamente inteligente e manipuladora.</Text>
+      <Text style={estilos.avatarTexto}>• Sua queda mostra os efeitos da pressão e da solidão.</Text>
+
+      <View style={estilos.botoes}>
+        <Button title="Voltar" onPress={() => nav.navigate('Tela05')} />
+      </View>
+    </View>
+  );
+}
