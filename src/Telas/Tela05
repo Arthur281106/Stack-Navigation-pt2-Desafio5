@@ -1,0 +1,29 @@
+import React from 'react';
+import { View, Text, Image, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { estilos } from '../styleSheet/estilos';
+
+export default function Tela05() {
+  const nav = useNavigation();
+
+  return (
+    <View style={estilos.avatarFundo}>
+      <Text style={estilos.avatarTitulo}>Sokka</Text>
+
+      <Image
+        source={{ uri: 'https://upload.wikimedia.org/wikipedia/en/c/cc/Sokka.png' }}
+        style={estilos.avatarImg}
+      />
+
+      <Text style={estilos.avatarTexto}>Sokka é o irmão de Katara, não possui poderes de dobra, mas é engenhoso e estratégico.</Text>
+      <Text style={estilos.avatarTexto}>• Guerreiro da Tribo da Água do Sul.</Text>
+      <Text style={estilos.avatarTexto}>• Humorístico e criativo.</Text>
+      <Text style={estilos.avatarTexto}>• Responsável por planos e invenções.</Text>
+
+      <View style={estilos.botoes}>
+        <Button title="Voltar" onPress={() => nav.navigate('Tela04')} />
+        <Button title="Próximo" onPress={() => nav.navigate('Tela06')} />
+      </View>
+    </View>
+  );
+}
