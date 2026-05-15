@@ -1,0 +1,29 @@
+import React from 'react';
+import { View, Text, Image, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { estilos } from '../styleSheet/estilos';
+
+export default function Tela02() {
+  const nav = useNavigation();
+
+  return (
+    <View style={estilos.avatarFundo}>
+      <Text style={estilos.avatarTitulo}>Katara</Text>
+
+      <Image
+        source={{ uri: 'https://upload.wikimedia.org/wikipedia/pt/thumb/3/39/Katara_Avatar.png/250px-Katara_Avatar.png' }}
+        style={estilos.avatarImg}
+      />
+
+      <Text style={estilos.avatarTexto}>Dominadora de água da Tribo da Água do Sul.</Text>
+      <Text style={estilos.avatarTexto}>• Companheira leal de Aang.</Text>
+      <Text style={estilos.avatarTexto}>• Habilidosa curandeira.</Text>
+      <Text style={estilos.avatarTexto}>• Determinada e corajosa.</Text>
+
+      <View style={estilos.botoes}>
+        <Button title="Voltar" onPress={() => nav.navigate('Tela01')} />
+        <Button title="Próximo" onPress={() => nav.navigate('Tela03')} />
+      </View>
+    </View>
+  );
+}
