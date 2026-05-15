@@ -1,0 +1,29 @@
+import React from 'react';
+import { View, Text, Image, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { estilos } from '../styleSheet/estilos';
+
+export default function Tela04() {
+  const nav = useNavigation();
+
+  return (
+    <View style={estilos.avatarFundo}>
+      <Text style={estilos.avatarTitulo}>Toph</Text>
+
+      <Image
+        source={{ uri: 'https://static.wikia.nocookie.net/avatar/images/4/46/Toph_Beifong.png/revision/latest/thumbnail/width/360/height/360?cb=20141021174750&path-prefix=pt-br' }}
+        style={estilos.avatarImg}
+      />
+
+      <Text style={estilos.avatarTexto}>Toph é uma dominadora de terra cega, mas extremamente poderosa.</Text>
+      <Text style={estilos.avatarTexto}>• Criou a técnica de dobra de metal.</Text>
+      <Text style={estilos.avatarTexto}>• Forte, independente e sarcástica.</Text>
+      <Text style={estilos.avatarTexto}>• Uma das maiores mestres da Terra Control.</Text>
+
+      <View style={estilos.botoes}>
+        <Button title="Voltar" onPress={() => nav.navigate('Tela03')} />
+        <Button title="Próximo" onPress={() => nav.navigate('Tela05')} />
+      </View>
+    </View>
+  );
+}
